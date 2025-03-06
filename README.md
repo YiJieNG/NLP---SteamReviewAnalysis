@@ -18,3 +18,11 @@ Resource: Switch from solely depends on CPU to CUDA core using RTX 3060
 Optimisation technique applied: Batching
 
 As a result, the running time has decreased significantly from more than 7 hours to 1.5 hours.
+
+## Data Preprocessing
+Convert timestamps to datetime objects.
+Extract year from timestamp.
+Clean review text by lowercasing, remove urls, remove html tags, remove special characters but keep spaces between words and remove extra white space.
+Drop rows with empty reviews after cleaning.
+Remove duplicates based on review_id.
+Convert voted_up to a sentiment label
